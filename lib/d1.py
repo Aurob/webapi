@@ -1,11 +1,12 @@
 import requests
 import json
 import lib.verify
+import os
 
-account_id = os.getenv('CLOUDFLARE_ACCOUNT_ID')
-database_id = os.getenv('CLOUDFLARE_DATABASE_ID')
-read_token = os.getenv('CLOUDFLARE_READ_TOKEN')
-edit_token = os.getenv('CLOUDFLARE_EDIT_TOKEN')
+account_id = os.getenv('CF_ACCOUNT_ID')
+database_id = os.getenv('CF_DATABASE_ID')
+read_token = os.getenv('CF_READ_TOKEN')
+edit_token = os.getenv('CF_EDIT_TOKEN')
 url = 'https://api.cloudflare.com/client/v4/accounts/' + account_id + '/d1/database/' + database_id + '/query'
 
 options = {

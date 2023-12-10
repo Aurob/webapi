@@ -5,16 +5,20 @@ from flask import Response
 import base64
 import io
 import secrets
-import os
-from os import environ as env
 from urllib.parse import quote_plus, urlencode
 import json
 
 import sys
 from jinja2 import TemplateNotFound
 
+from dotenv import load_dotenv
+import os
+
 import lib.tools as T
+
+load_dotenv()
 from lib.verify import *
+
 
 WEB_BASE = '/var/www/web/'
 

@@ -7,10 +7,10 @@ import os
 from urllib.parse import urlencode
 
 # The Application Audience (AUD) tag for your application
-POLICY_AUD = os.getenv("POLICY_AUD")
+POLICY_AUD = os.getenv("CF_POLICY_AUD")
 if not POLICY_AUD:
     raise ValueError("Environment variable POLICY_AUD is not set")
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = os.getenv("CF_SECRET_KEY")
 if not SECRET_KEY:
     raise ValueError("Environment variable SECRET_KEY is not set")
 

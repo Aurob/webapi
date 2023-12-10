@@ -5,6 +5,7 @@ import random
 import imageio
 import io
 import base64
+import os
 
 base_url = 'https://maps.googleapis.com/maps/api/streetview?'
 key = os.getenv('BING_MAPS_API_KEY')
