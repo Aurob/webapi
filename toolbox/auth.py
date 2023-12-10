@@ -6,8 +6,14 @@ import requests
 import jwt
 import json
 import os
+<<<<<<< HEAD
 # The Application Audience (AUD) tag for your application
 POLICY_AUD = 'CF_AUD_KEY'
+=======
+
+# The Application Audience (AUD) tag for your application
+POLICY_AUD = os.getenv("CF_AUD_KEY")
+>>>>>>> 5277a79 (repo cleanup, adding .env template)
 
 # Your CF Access team domain
 TEAM_DOMAIN = 'https://audev.cloudflareaccess.com' #os.getenv("TEAM_DOMAIN")

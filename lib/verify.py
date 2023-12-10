@@ -7,7 +7,16 @@ import os
 from urllib.parse import urlencode
 
 # The Application Audience (AUD) tag for your application
+<<<<<<< HEAD
 POLICY_AUD = 'c4caae125a9a145bf660dcd5fa139f15008b977bb25082c7371763e27432fe25' #os.getenv("POLICY_AUD")
+=======
+POLICY_AUD = os.getenv("POLICY_AUD")
+if not POLICY_AUD:
+    raise ValueError("Environment variable POLICY_AUD is not set")
+SECRET_KEY = os.getenv("SECRET_KEY")
+if not SECRET_KEY:
+    raise ValueError("Environment variable SECRET_KEY is not set")
+>>>>>>> 5277a79 (repo cleanup, adding .env template)
 
 # Your CF Access team domain
 TEAM_DOMAIN = 'https://audev.cloudflareaccess.com' #os.getenv("TEAM_DOMAIN")
@@ -39,9 +48,12 @@ def validate():
             return False
     return False
 
+<<<<<<< HEAD
 SECRET_KEY = '0x4AAAAAAAML4BH8jk8npHdsNnTg0hAy8p0'
 
 
+=======
+>>>>>>> 5277a79 (repo cleanup, adding .env template)
 def alt_validate():
     body = request.form
     token = body.get('cf-turnstile-response')

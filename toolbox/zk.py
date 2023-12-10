@@ -5,8 +5,12 @@ import string
 import time
 from lib.private import private
 
+<<<<<<< HEAD
 root = '/var/www/rau.dev/api/data/zk/'
 
+=======
+root = os.path.join(os.path.dirname(__file__), '../../data/zk/')
+>>>>>>> 5277a79 (repo cleanup, adding .env template)
 cache = {}
 
 def list():

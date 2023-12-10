@@ -13,7 +13,11 @@ import json
 import sys
 from jinja2 import TemplateNotFound
 
+<<<<<<< HEAD
 import tools as T
+=======
+import lib.tools as T
+>>>>>>> 5277a79 (repo cleanup, adding .env template)
 from lib.verify import *
 
 WEB_BASE = '/var/www/web/'
@@ -58,6 +62,7 @@ def handle_result(result):
                     imgtype = 'image/jpeg'
                     
                 if 'image' in result['result']:
+<<<<<<< HEAD
                     # Response(b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n' + jpg.tobytes() + b'\r\n\r\n', mimetype='multipart/x-mixed-replace; boundary=frame')
                     # return send_file(io.BytesIO(base64.b64decode(result['result']['image'])), mimetype=imgtype)
                     
@@ -74,6 +79,16 @@ def handle_result(result):
                 if 'local' in result['result']:
                     # return send_file(result['result']['local'], mimetype='image/jpeg', cache_timeout=0)
 
+=======
+                    return send_file(io.BytesIO(result['result']['image']), mimetype=imgtype)
+                if 'b64image' in result['result']:
+                    return send_file(io.BytesIO(base64.b64decode(result['result']['b64image'])), mimetype=imgtype)
+
+                if 'raw' in result['result']:
+                    return f'{result["result"]["raw"]}'
+
+                if 'local' in result['result']:
+>>>>>>> 5277a79 (repo cleanup, adding .env template)
                     response = make_response(send_file(result['result']['local'], mimetype='image/jpeg'))
                     response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
                     response.headers['Pragma'] = 'no-cache'

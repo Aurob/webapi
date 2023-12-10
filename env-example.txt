@@ -1,0 +1,8 @@
+FLASK_APP=application.py
+FLASK_ENV=development
+SECRET_KEY=yoursecretkeyhere
+DATABASE_URL=mysql://user:password@localhost/dbname
+API_KEY=yourapikeyhere
+ANOTHER_API_SECRET=anotherapisecrethere
+EMAIL_HOST_USER=youremail@example.com
+EMAIL_HOST_PASSWORD=yourpassword
