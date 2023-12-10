@@ -7,11 +7,7 @@ import io
 import base64
 
 base_url = 'https://maps.googleapis.com/maps/api/streetview?'
-<<<<<<< HEAD
-key = 'BING_API_KEY'
-=======
 key = os.getenv('BING_MAPS_API_KEY')
->>>>>>> 5277a79 (repo cleanup, adding .env template)
 size = '640x640'
 
 

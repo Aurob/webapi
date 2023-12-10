@@ -2,11 +2,7 @@ import os
 import json
 import re
 
-<<<<<<< HEAD
-data_folder = '/var/www/rau.dev/api/data/'
-=======
 data_folder = os.path.join(os.path.dirname(__file__), '../../data/')
->>>>>>> 5277a79 (repo cleanup, adding .env template)
 
 def file(filename):
     try:

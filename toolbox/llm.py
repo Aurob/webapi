@@ -1,11 +1,7 @@
 import openai
 import json
 
-<<<<<<< HEAD
-openai.api_key = "OAI_API_KEY"
-=======
 openai.api_key = os.getenv('OPENAI_API_KEY')
->>>>>>> 5277a79 (repo cleanup, adding .env template)
 prompt = ''
 models = ['gpt-3.5-turbo', 'gpt-4', 'gpt-4-1106-preview']
 default_model = 2

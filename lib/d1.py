@@ -2,17 +2,10 @@ import requests
 import json
 import lib.verify
 
-<<<<<<< HEAD
-account_id = '6fb4c41d9a5924d326e7753636be1c66'
-database_id = '3c48150e-0ac2-495a-84dd-0b646120121e'
-read_token = 'MRPRxgYL_Z6fCPvSGdX90q_ErE5k97KUU9dkjKHP'
-edit_token = 'vsMovwR3Gt7379VhxITsYiJZyieBQL52kRPBFr7h'
-=======
 account_id = os.getenv('CLOUDFLARE_ACCOUNT_ID')
 database_id = os.getenv('CLOUDFLARE_DATABASE_ID')
 read_token = os.getenv('CLOUDFLARE_READ_TOKEN')
 edit_token = os.getenv('CLOUDFLARE_EDIT_TOKEN')
->>>>>>> 5277a79 (repo cleanup, adding .env template)
 url = 'https://api.cloudflare.com/client/v4/accounts/' + account_id + '/d1/database/' + database_id + '/query'
 
 options = {
