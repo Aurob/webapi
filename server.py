@@ -17,8 +17,6 @@ import os
 import lib.tools as T
 
 load_dotenv()
-from lib.verify import *
-
 
 WEB_BASE = '/var/www/web/'
 
